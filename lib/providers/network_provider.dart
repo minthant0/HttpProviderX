@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:http/http.dart';
-import 'package:provider_rest_api/models/pets.dart';
+import 'package:provider_rest_api/models/tests.dart';
 import 'package:http/http.dart' as http;
 
 class PetsProvider extends ChangeNotifier {

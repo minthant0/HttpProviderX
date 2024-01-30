@@ -3,7 +3,7 @@ import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:provider/provider.dart';
-import 'package:provider_rest_api/providers/pets_provider.dart';
+import 'package:provider_rest_api/providers/network_provider.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -22,7 +22,6 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-    log('build called');
     final provider = Provider.of<PetsProvider>(context);
     return Scaffold(
       appBar: AppBar(
@@ -71,6 +70,7 @@ class _HomePageState extends State<HomePage> {
               provider.search(value);
             },
             decoration: InputDecoration(
+              hintStyle: TextStyle(color: Colors.black),
               hintText: 'Search',
               border: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(10),
